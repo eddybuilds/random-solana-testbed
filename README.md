@@ -38,6 +38,10 @@
 * Develop a framework over the Metaplex Storefront (cypress?)
 * Develop a framework over the Solana Programs (@solana/web3.js?)
 * Move manual testing documented in point 1 into CI with these frameworks
+* Switchboard/Oracles
+   * Health checks on data uptime and data consistency between oracles
+      * Well-tested disaster plans if all oracles are down, etc... 
+   * General integration tests between oracle and internal services 
 
 ### Master: 
 
@@ -48,3 +52,13 @@
 * Security
    * Auditors? 
    * Bug bounty boards? 
+
+### Caveats:
+
+This assumes linear work without interruptions. Things that will require more attention as and when they pop up: 
+
+#### Milestones: 
+
+* Mainnet Launch
+* Token Launch
+* 
