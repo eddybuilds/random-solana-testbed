@@ -61,4 +61,4 @@ This assumes linear work without interruptions. Things that will require more at
 
 * Mainnet Launch
 * Token Launch
-* 
+* ...
