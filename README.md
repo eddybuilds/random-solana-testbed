@@ -71,5 +71,5 @@ This assumes linear work without interruptions. Things that will require more at
 
 ### Random thoughts: 
 * What happens if a bad actor adds a custom bet designed to have insane odds, but they can fix the game? Limits?
-* What is the betting algorithm? Simple ratio of `For:Against`?
+* What is the betting algorithm? Simple ratio of `for:against`?
 * ...
