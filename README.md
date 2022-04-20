@@ -18,21 +18,28 @@
 - @solana/web3.js acts like Ethereums web3 library
 - Switchboard offers localnet testing mocks
 
-### Rough Testing Plan: 
+## Draft Testing Strategy
+
+### Apprentice: 
 
 * Document user flows to build up a series of manual tests to be carried out
-* Check there’s a proper test/dev/deployment divide for releasing 
+* Check there’s a proper test/dev/deployment divide for releasing
 * Build an integration environment
     * Docker-compose a local network with deterministic state
         * Mock switchboard feeds
         * Alice/Bob testing accounts with funds
         * Metaplex storefront for UI testing
     * Deploy said network with Github Actions for CI testing
+        * Add current automated tests into CI
+        * Set-up test reporting
+
+### Journeyman: 
+
 * Develop a framework over the Metaplex Storefront (cypress?)
 * Develop a framework over the Solana Programs (@solana/web3.js?)
 * Move manual testing documented in point 1 into CI with these frameworks
 
-### Down The Line Plans: 
+### Master: 
 
 * Research best testing practices across other projects for Solana Programs and evaluate/implement
    * Static analysis tools like [Slither](https://github.com/crytic/slither)
