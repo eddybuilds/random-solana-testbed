@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "@solana/web3.js": "^1.39.1"
+  },
+  "name": "random-solana-testbed",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddybuilds/random-solana-testbed.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eddybuilds/random-solana-testbed/issues"
+  },
+  "homepage": "https://github.com/eddybuilds/random-solana-testbed#readme",
+  "description": ""
+}
