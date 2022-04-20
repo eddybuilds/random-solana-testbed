@@ -31,4 +31,13 @@
 * Develop a framework over the Metaplex Storefront (cypress?)
 * Develop a framework over the Solana Programs (@solana/web3.js?)
 * Move manual testing documented in point 1 into CI with these frameworks
-* Profit 
+
+### Down The Line Plans: 
+
+* Research best testing practices across other projects for Solana Programs and evaluate/implement
+   * Static analysis tools like [Slither](https://github.com/crytic/slither)
+   * Fuzzing
+   * General best practices 
+* Security
+   * Auditors? 
+   * Bug bounty boards? 
