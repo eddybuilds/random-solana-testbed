@@ -1,4 +1,4 @@
-## update and install some things we should probably have
+# install ubuntu dependencies
 apt-get update
 apt-get install -y \
   curl \
@@ -14,7 +14,7 @@ apt-get install -y \
   pkg-config \
   libudev-dev
 
-## Install rustup and common components
+## install rustup and common components
 curl https://sh.rustup.rs -sSf | sh -s -- -y 
 rustup install nightly
 rustup component add rustfmt
@@ -32,3 +32,6 @@ echo 'PATH=$PATH:/$PATH:/opt/solana-1.8.2/bin' >> ~/.bashrc
 
 # install anchor
 cargo install --git https://github.com/project-serum/anchor avm --locked --force
+avm install latest
+avm use latest
+anchor --version
