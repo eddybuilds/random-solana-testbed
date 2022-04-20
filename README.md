@@ -36,7 +36,7 @@
 
 * Research best testing practices across other projects for Solana Programs and evaluate/implement
    * Static analysis tools like [Slither](https://github.com/crytic/slither)
-   * Fuzzing
+   * Fuzzing tools like [Echidna](https://github.com/crytic/echidna)
    * General best practices 
 * Security
    * Auditors? 
