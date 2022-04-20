@@ -21,11 +21,14 @@
 ### Rough Testing Plan: 
 
 * Document user flows to build up a series of manual tests to be carried out
-
+* Check there’s a proper test/dev/deployment divide for releasing 
 * Build an integration environment
     * Docker-compose a local network with deterministic state
+        * Mock switchboard feeds
+        * Alice/Bob testing accounts with funds
+        * Metaplex storefront for UI testing
     * Deploy said network with Github Actions for CI testing
-
-* Check there’s a proper test/dev/deployment divide for releasing 
-
-
+* Develop a framework over the Metaplex Storefront (cypress?)
+* Develop a framework over the Solana Programs (@solana/web3.js?)
+* Move manual testing documented in point 1 into CI with these frameworks
+* Profit 
