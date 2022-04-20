@@ -1,4 +1,4 @@
-# install ubuntu dependencies
+## update and install some things we should probably have
 apt-get update
 apt-get install -y \
   curl \
@@ -12,9 +12,10 @@ apt-get install -y \
   openssl \
   libssl-dev \
   pkg-config \
-  libudev-dev
+  libudev-dev \
+  wget
 
-## install rustup and common components
+## Install rustup and common components
 curl https://sh.rustup.rs -sSf | sh -s -- -y 
 rustup install nightly
 rustup component add rustfmt
@@ -25,13 +26,17 @@ rustup component add clippy --toolchain nightly
 cargo install cargo-expand
 cargo install cargo-edit
 
+## setup and install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+cp -R /root/.oh-my-zsh /home/$USERNAME
+cp /root/.zshrc /home/$USERNAME
+sed -i -e "s/\/root\/.oh-my-zsh/\/home\/$USERNAME\/.oh-my-zsh/g" /home/$USERNAME/.zshrc
+chown -R $USER_UID:$USER_GID /home/$USERNAME/.oh-my-zsh /home/$USERNAME/.zshrc
+
 # install solana
-sh -c "$(curl -sSfL https://release.solana.com/v1.8.2/install)"
+mkdir ~/.solana
+cd ~/.solana
+wget https://github.com/solana-labs/solana/releases/download/v1.10.9/solana-release-x86_64-unknown-linux-gnu.tar.bz2
+tar -xvf solana-release-x86_64-unknown-linux-gnu.tar.bz2
 
-echo 'PATH=$PATH:/$PATH:/opt/solana-1.8.2/bin' >> ~/.bashrc
-
-# install anchor
-cargo install --git https://github.com/project-serum/anchor avm --locked --force
-avm install latest
-avm use latest
-anchor --version
+echo 'PATH=$PATH:/$HOME/.solana/solana-release/bin/' >> ~/.bashrc
