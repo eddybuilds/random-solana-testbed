@@ -1,4 +1,22 @@
-FROM --platform=linux/x86_64 ubuntu:18.04
+# STAGE 0
+FROM rust:slim-buster
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN rustup toolchain install nightly && rustup default nightly && rustup component add rustfmt
+RUN apt-get update && apt-get install -y git pkg-config libudev-dev make libclang-dev clang cmake
+RUN git clone https://github.com/solana-labs/solana
+WORKDIR /solana
+RUN --mount=type=cache,target=/usr/local/cargo/registry \
+    --mount=type=cache,target=/solana/target/release/build \
+    --mount=type=cache,target=/solana/target/release/deps \
+    --mount=type=cache,target=/solana/target/release/incremental \
+    cargo build --release
+
+# STAGE 1 
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 WORKDIR /home/
 
@@ -36,3 +54,5 @@ RUN npm i -g @project-serum/anchor-cli
 # confirm installation
 RUN node -v
 RUN npm -v
+
+COPY --from=0 /solana/target/release/* /usr/local/bin
