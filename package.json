@@ -1,11 +1,13 @@
 {
   "dependencies": {
-    "@solana/web3.js": "^1.39.1"
+    "@solana/web3.js": "^1.39.1",
+    "@switchboard-xyz/switchboard-v2": "0.0.82"
   },
   "name": "random-solana-testbed",
   "version": "1.0.0",
   "main": "src/index.js",
   "devDependencies": {},
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
