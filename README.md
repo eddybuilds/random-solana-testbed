@@ -22,9 +22,10 @@
 
 ## Draft Testing Strategy
 
-### Apprentice: 
+### I: 
 * Document user flows to build up a series of manual tests to be carried out
 * Check there’s a proper test/dev/deployment divide for releasing
+* Set-up initial monitoring (nodes, APIs, etc...) 
 * Build an integration environment
     * Docker-compose a local network with deterministic state
         * Mock switchboard feeds
@@ -34,7 +35,7 @@
         * Add current automated tests into CI
         * Set-up test reporting
 
-### Journeyman: 
+### II: 
 * Develop a framework over the Metaplex Storefront (cypress?)
 * Develop a framework over the Solana Programs (@solana/web3.js?)
 * Move manual testing documented in point 1 into CI with these frameworks
@@ -43,7 +44,7 @@
       * Well-tested disaster plans if all oracles are down, etc... 
    * General integration tests between oracle and internal services 
 
-### Master: 
+### III: 
 * Research best testing practices across other projects for Solana Programs and evaluate/implement
    * Static analysis tools like [Slither](https://github.com/crytic/slither)
    * Fuzzing tools like [Echidna](https://github.com/crytic/echidna)
