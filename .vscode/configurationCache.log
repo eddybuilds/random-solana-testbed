@@ -1,0 +1,1 @@
+{"buildTargets":["launch-clean-testnet","launch-metaplex","launch-testnet","solana-bootstrap","solana-devnet","solana-localnet"],"launchTargets":[],"customConfigurationProvider":{"workspaceBrowse":{"browsePath":[],"compilerArgs":[]},"fileIndex":[]}}

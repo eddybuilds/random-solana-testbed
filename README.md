@@ -12,6 +12,7 @@
 - https://docs.metaplex.com/storefront/introduction
 - https://docs.switchboard.xyz/developers/localnet
 - https://solana-labs.github.io/solana-web3.js/
+- https://docs.switchboard.xyz/oracle/monitor
 
 ### Technical Notes:
 - Local network starts with solana-test-validator

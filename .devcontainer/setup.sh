@@ -1,4 +1,4 @@
-# update and install some things we should probably have
+# ubuntu
 apt-get update
 apt-get install -y \
   curl \
@@ -16,28 +16,19 @@ apt-get install -y \
   wget \
   cmake
 
-# # install rustup and common components
-# curl https://sh.rustup.rs -sSf | sh -s -- -y 
-# rustup install nightly
-# rustup component add rustfmt
-# rustup component add rustfmt --toolchain nightly
-# rustup component add clippy 
-# rustup component add clippy --toolchain nightly
+# rust
+curl https://sh.rustup.rs -sSf | sh -s -- -y 
 
-# cargo install cargo-expand
-# cargo install cargo-edit
+source $HOME/.cargo/env
 
-# # setup and install oh-my-zsh
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-# cp -R /root/.oh-my-zsh /home/$USERNAME
-# cp /root/.zshrc /home/$USERNAME
-# sed -i -e "s/\/root\/.oh-my-zsh/\/home\/$USERNAME\/.oh-my-zsh/g" /home/$USERNAME/.zshrc
-# chown -R $USER_UID:$USER_GID /home/$USERNAME/.oh-my-zsh /home/$USERNAME/.zshrc
+rustup install nightly
+rustup component add rustfmt
+rustup component add rustfmt --toolchain nightly
+rustup component add clippy 
+rustup component add clippy --toolchain nightly
 
-# install solana
-# mkdir ~/.solana
-# cd ~/.solana
-# wget https://github.com/solana-labs/solana/releases/download/v1.10.9/solana-release-x86_64-unknown-linux-gnu.tar.bz2
-# tar -xvf solana-release-x86_64-unknown-linux-gnu.tar.bz2
+cargo install cargo-expand
+cargo install cargo-edit
 
-# echo 'PATH=$PATH:/$HOME/.solana/solana-release/bin/' >> ~/.bashrc
+# anchor
+cargo install --git https://github.com/project-serum/anchor --tag v0.24.2 anchor-cli --locked

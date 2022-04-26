@@ -1,5 +1,11 @@
 {
 	"name": "Random Solana Testbed",
+
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "dev",
+	"workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+
 	"extensions": [
 		"cschleiden.vscode-github-actions",
 		"ms-vsliveshare.vsliveshare",
@@ -7,7 +13,7 @@
 		"serayuzgur.crates",
 		"vadimcn.vscode-lldb"
 	],
-	"dockerFile": "Dockerfile",
+
 	"settings": {
 		"editor.formatOnSave": true,
 		"files.exclude": {
