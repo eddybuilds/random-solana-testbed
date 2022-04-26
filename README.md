@@ -13,6 +13,7 @@
 - https://docs.switchboard.xyz/developers/localnet
 - https://solana-labs.github.io/solana-web3.js/
 - https://docs.switchboard.xyz/oracle/monitor
+- https://github.com/solana-labs/solana-program-library
 
 ### Technical Notes:
 - Local network starts with solana-test-validator
